@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="shortcut icon" href="#">
+	<meta charset="ISO-8859-1">
+	<title>Login page</title>
+	<script src="utils.js" charset="utf-8" defer></script>	
+    <script src="login.js" charset="utf-8" defer></script>
+	<link rel="stylesheet" type="text/css" media="all" href="/TIW-MoneyTransfer-RIA/css/style.css">
+</head>
+
+<body class = "background">
+
+	<div class = "welcome">
+	<h1>Money Transfer</h1>
+	<h2>Welcome  </h2>
+	<h3>Login or Signup to join the application!</h3>
+	</div>
+	
+	<div class = "sx">
+		<form class = "login-form" action = "#">
+		<p>Login</p>
+			<fieldset>
+			<input id = "username" type="text" name="username" placeholder="Your Username" required>
+			<input type="password" name="pwd" placeholder="Your Password" required> 
+			<input id="login_button" type="button" value="Login">
+			<div  id="login_error" class="error-message">Email or password not valid!</div>
+	
+			</fieldset>
+		</form>
+	</div>
+	
+	<div class = "dx">	
+		<form class = "signup-form" action = "#">
+		<p>New user? Sign up!</p>
+			<fieldset>
+			<input type="text" name="name" placeholder="Name" required>
+			<input type="text" name="surname" placeholder="Surname" required> 
+			<input type="text" name="username" placeholder="Username" required>
+			<input type="email" name="email" placeholder="Email" required> 
+			<input type="password" name="pwd" placeholder="Password" required> 
+			<input type="password" name="pwd2" placeholder="Repeat Password" required> 
+			<input id="signup_button" type="button" value="Signup">
+			<div  id="signup_error" class="error-message"></div>
+	
+			</fieldset>
+		</form>
+	</div>
+
+</body>
+</html>

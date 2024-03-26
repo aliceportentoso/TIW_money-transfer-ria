@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="shortcut icon" href="#">
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" type="text/css" media="all" href="/TIW-MoneyTransfer-RIA/css/style.css">
+	<script src="utils.js" charset="utf-8" defer></script>	
+	<script src="home.js" charset="utf-8" defer></script>
+<title>Home page</title>
+</head>
+
+<body class = "background">
+
+	<input id="id_logout" type="button" value="Logout">
+	
+	<div class = "welcome">
+	<h1>Money Transfer</h1>
+	<h2 id="div_welcome"></h2>
+	</div>	
+	
+	<div id="id_accounts"></div>
+	
+	<h2 id ="accounts_alert" class = "div"></h2>
+	<div class = "div" id ="div_info_account">
+		<p id="id_account"></p>
+		<p id="id_balance"></p>
+	</div>
+
+	<div id="div_send_form"> 
+	<form action = "#">
+	<p>Complete the form to send money</p>
+	<fieldset> 
+		<input type="text" id="userdest" name="userdest" placeholder="Username Destination" required list = "userdest-datalist">
+			<datalist id="userdest-datalist"></datalist>
+		<input type="text" id="accdest" name="accdest" placeholder="Account ID Destination" required list = "accdest-datalist">
+			<datalist id="accdest-datalist"></datalist>
+		<input type="text" id="description" name="description" placeholder="Description" required>  
+		<input type="text" id="amount" name="amount" placeholder="Amount" required> 
+		<input type="hidden" name="idAccount">
+		
+		<input id="id_send_button" type="button" value="Send">
+		<div id ="div_send_error"></div>
+	</fieldset>
+	</form>
+	</div>
+
+	<div id="div_confirmation" class = "div_result div hide">
+		<h2>Transaction successful!</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Old Balance</th>
+					<th>New Balance</th>
+				</tr>
+			</thead>
+			<tbody id="div_confirmation_body">
+			</tbody>
+		</table>
+		<div>
+			<p id="address_book_text" class = "hide">Do you want to save contact?</p>
+			<input id = "button_save" type = "button" value = "Yes" class = "hide">
+			<input id = "button_do_not_save" type = 'button' value = "No" class = "hide">
+			<input id = "button_back" type = 'button' value = "Back" class = "hide">
+		</div>
+		
+	</div>
+	
+	<div id="div_failed" class = "div_result div hide">
+		<h2>Transaction Failed!</h2>
+		<div id="div_failed_body"></div>
+		<input class = "hide" id="button_failed" type = 'button' value="Back">	
+	</div>
+	
+	<div class = "dx div" id="div_transactions">
+		<p>Transactions</p>
+		 <table>
+			<thead>
+				<tr>
+					<th id = "date">Date</th>
+					<th>Amount</th>
+					<th>Origin</th>
+					<th>Destination</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+	
+			<tbody id="id_transactions_body">
+			</tbody>
+		</table>
+	</div>	
+	<div id="transactions_alert" class="div dx"> </div>
+		
+	
+</body>
+</html>
+
